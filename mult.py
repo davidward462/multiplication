@@ -11,15 +11,21 @@ def CheckArgs():
     else:
         print("No arguments passed.")
 
+
+# Print a multiplication table with values from 1 to 'value'
+def PrintTable(value):
+    maxValue = value + 1
+    for i in range(1, maxValue):
+        for j in range(1, maxValue):
+            product = i * j
+            print(f"{product}\t", end='')
+        print("\n")
+
+
 def main():
 
     CheckArgs()
 
-
-    for i in range(1, 13):
-        for j in range(1, 13):
-            product = i * j
-            print(f"{product}\t", end='')
-        print("\n")
+    PrintTable(12)
 
 main()
